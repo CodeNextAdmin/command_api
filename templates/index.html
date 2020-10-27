@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Home </title>
+        <link rel="stylesheet" type="text/css" href={{url_for('static', filename='index.css')}}>  
+   </head>
+
+    <body>
+    <div id="container">
+    
+        <div id="get_method">
+            Type a command below to learn more
+            <div id="description">Or try hitting an API endpoint: /search<u>?cmd=</u><i>command</i></div>
+        </div>
+        <div id="post_method">
+                <form action="{{url_for('search')}}" method="post">
+                   <input type="text" name="search_bar" id="search_bar" list="datalist"/>
+                   <datalist id="datalist">
+                   {%for element in data%}
+                   <option value={{element}} />
+                   {% endfor %}
+                   </datalist>
+                </form>
+        </div>
+    </div>
+    </body>
+
+</html>

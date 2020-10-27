@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Home </title>
+        <link rel="stylesheet" type="text/css" href={{url_for('static', filename='index.css')}}>  
+   </head>
+
+    <body>
+            <div id="container">
+                  <h1>{{data.command}}</h1>
+                  
+                  <div id="man-text">{{data.tldr_summary}}</div>
+            </div>
+    </body>
+
+</html>
